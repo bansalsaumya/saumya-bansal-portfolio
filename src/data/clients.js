@@ -1,0 +1,74 @@
+export const clients = [
+  {
+    id: 'aarohi-enterprise',
+    name: 'Aarohi Enterprise',
+    industry: 'Manufacturing / B2B',
+    description:
+      'Worked on the digital presence and marketing content for a manufacturing business, including website-related work, product-focused social media content, reels, visual creatives and SEO-oriented content.',
+    services: [
+      'Website Development',
+      'Product Presentation',
+      'Laminated Fabric Marketing',
+      'Instagram Content & Reels',
+      'SEO-Oriented Content',
+      'AI-Assisted Creative Work',
+    ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'SEO Layout', 'AI Assets'],
+    image: '/assets/aarohi-mockup.png.png',
+    liveUrl: 'https://aarohifoamlamination.com/',
+    caseStudyUrl: null,
+  },
+  {
+    id: 'siddhivinayak-pg',
+    name: 'Siddhivinayak PG',
+    industry: 'Hospitality',
+    description:
+      'Developed and supported the digital presence of a PG business through website development, responsive UI, local SEO and Google Business Profile-related work.',
+    services: [
+      'Website Development',
+      'Responsive Web Design',
+      'Local SEO',
+      'Google Business Profile',
+      'Digital Presence',
+    ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'Local SEO'],
+    image: '/assets/siddhivinayak-mockup.png.png',
+    liveUrl: 'https://siddhivinayakpg.in/',
+    caseStudyUrl: null,
+  },
+  {
+    id: 'real-estate',
+    name: 'Real Estate Projects',
+    industry: 'Real Estate',
+    description:
+      'Created social media content, property presentations, digital marketing campaigns, creative posts and branding materials for real estate businesses.',
+    services: [
+      'Social Media Marketing',
+      'Property Content',
+      'Digital Marketing',
+      'Creative Posts',
+      'Branding',
+    ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive UI', 'Digital Branding'],
+    image: '/assets/realstate-mockup.png.png.png',
+    liveUrl: null,
+    caseStudyUrl: null,
+  },
+  {
+    id: 'balaji-woodcraft',
+    name: 'Shree Balaji Woodcraft',
+    industry: 'Manufacturing',
+    description:
+      'Built a responsive business website with SEO-oriented structure, clean UI/UX design and optimized page load performance for a woodcraft manufacturing business.',
+    services: [
+      'Website Development',
+      'UI/UX Design',
+      'Responsive Design',
+      'SEO-Oriented Structure',
+    ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Responsive Design', 'Speed Optimization'],
+    image: '/assets/balaji-woodcraft-mockup.png.png',
+    liveUrl: 'https://shree-balaji-furniture-blush.vercel.app/',
+    caseStudyUrl: null,
+  },
+];

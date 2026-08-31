@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Saumya Bansal</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=1.1">
+</head>
+<body>
+
+    <!-- Header navigation matching the Figma layout -->
+    <header class="app-header">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-saumya">Saumya</span><span class="logo-bansal">Bansal</span><span class="logo-dot">.</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="contact.html" class="nav-link btn-contact-me">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="scroll-container">
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-section-figma">
+            <div class="section-wrapper">
+                <div class="services-header reveal-on-scroll">
+                    <div>
+                        <span class="figma-sub">— What I Do</span>
+                        <h2>Services I Provide</h2>
+                    </div>
+                    <a href="contact.html" class="btn-all-services">Let's Discuss <span>→</span></a>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal-on-scroll">
+                        <div class="s-icon">🌐</div>
+                        <h3>Web Development</h3>
+                        <p>Business websites, landing pages & responsive web experiences.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-100">
+                        <div class="s-icon">📈</div>
+                        <h3>SEO</h3>
+                        <p>Keyword research, on-page SEO, website structure & search visibility.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-200">
+                        <div class="s-icon">📍</div>
+                        <h3>Google Business Profile</h3>
+                        <p>Business listings, optimization, categories, descriptions & local presence.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-300">
+                        <div class="s-icon">📱</div>
+                        <h3>Social Media Marketing</h3>
+                        <p>Instagram content, reels, captions, hashtags & content strategy.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-100">
+                        <div class="s-icon">🎨</div>
+                        <h3>Digital Branding</h3>
+                        <p>Social media creatives, business cards, promotional designs & brand presentation.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-200">
+                        <div class="s-icon">🤖</div>
+                        <h3>AI Solutions</h3>
+                        <p>AI-assisted development, prompt engineering, AI image/video generation & creative workflows.</p>
+                    </div>
+                    <div class="service-card reveal-on-scroll delay-300">
+                        <div class="s-icon">📊</div>
+                        <h3>Digital Marketing</h3>
+                        <p>Complete digital presence planning and online business promotion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FLOATING CHAT WIDGET -->
+    <div class="floating-chat-widget" id="whatsapp-chat-widget">
+        <button class="chat-trigger-btn" id="chat-trigger-btn" aria-label="Open Chat">
+            <span class="chat-badge"></span>
+            💬
+        </button>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <div class="chat-header-avatar">SB</div>
+                <div class="chat-header-info">
+                    <h4>Saumya Bansal</h4>
+                    <span>Online | Growth Assistant</span>
+                </div>
+            </div>
+            <div class="chat-body">
+                <p class="chat-msg">Hi there! 👋 I help brands grow online. What can I help you build or rank today?</p>
+            </div>
+            <div class="chat-options">
+                <button class="chat-opt-btn" onclick="triggerChatOption('seo')">🚀 Need Free SEO Audit <span>→</span></button>
+                <button class="chat-opt-btn" onclick="triggerChatOption('web')">💻 Want to Build Website <span>→</span></button>
+                <button class="chat-opt-btn" onclick="triggerChatOption('chat')">💬 Direct WhatsApp Chat <span>→</span></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="figma-footer">
+        <p>&copy; 2026 Saumya Bansal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js?v=3.0"></script>
+</body>
+</html>

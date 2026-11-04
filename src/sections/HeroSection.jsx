@@ -52,7 +52,7 @@ export default function HeroSection() {
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[var(--color-accent)] rounded-full opacity-[0.06] blur-[120px]" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[var(--color-accent-secondary)] rounded-full opacity-[0.04] blur-[120px]" />
 
-      <div className="container-max px-6 pt-32 pb-20 relative z-10">
+      <div className="container-max px-6 pt-28 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
           {/* Left Content */}
           <div>
@@ -122,19 +122,19 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="flex flex-wrap gap-3 mb-8"
             >
-              <a href="#projects" className="btn-primary">
-                Explore 3D &amp; Web Apps <ArrowRight size={16} />
+              <a href="#projects" className="btn-primary !px-5 !py-3 !text-sm">
+                Explore 3D &amp; Web Apps <ArrowRight size={15} />
               </a>
-              <a href="#clients" className="btn-secondary">
+              <a href="#clients" className="btn-secondary !px-5 !py-3 !text-sm">
                 View Client Track Record
               </a>
               <a
                 href={contactInfo.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-ghost"
+                className="btn-ghost !px-4 !py-3 !text-sm border border-[var(--color-border)] hover:border-[var(--color-accent)]"
               >
-                <Download size={16} /> Resume (PDF)
+                <Download size={15} /> Resume (PDF)
               </a>
             </motion.div>
 

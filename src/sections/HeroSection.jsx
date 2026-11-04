@@ -108,15 +108,15 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.35 }}
-              className="flex flex-col sm:flex-row flex-wrap gap-3 mb-8"
+              className="flex flex-wrap gap-3 mb-8"
             >
-              <a href="#projects" className="btn-primary w-full sm:w-auto justify-center">
+              <a href="#projects" className="btn-primary">
                 View My Projects <ArrowRight size={16} />
               </a>
-              <a href="#contact" className="btn-secondary w-full sm:w-auto justify-center">
+              <a href="#contact" className="btn-secondary">
                 Let's Work Together
               </a>
-              <a href={contactInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost w-full sm:w-auto justify-center">
+              <a href={contactInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
                 <Download size={16} /> Resume
               </a>
             </motion.div>
@@ -129,7 +129,7 @@ export default function HeroSection() {
               className="flex flex-wrap gap-2"
             >
               {badges.map((b) => (
-                <span key={b.label} className="badge !text-[0.7rem] sm:!text-xs">
+                <span key={b.label} className="badge">
                   <b.icon size={12} className="mr-1.5" />
                   {b.label}
                 </span>
@@ -141,9 +141,9 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="mt-8 lg:hidden flex justify-center"
+              className="mt-10 lg:hidden flex justify-center"
             >
-              <div className="w-56 sm:w-64 aspect-[3/4] rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-2xl bg-[var(--color-bg-card)] glow-border">
+              <div className="w-64 h-80 rounded-2xl overflow-hidden border border-[var(--color-border)] shadow-2xl bg-[var(--color-bg-card)]">
                 <img
                   src="/assets/saumya-portrait.png"
                   alt="Saumya Bansal"

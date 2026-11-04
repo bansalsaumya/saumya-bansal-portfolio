@@ -28,10 +28,10 @@ export default function FeaturedProjects() {
             >
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Project Info */}
-                <div className="p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+                <div className="p-8 lg:p-10 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <span className="text-3xl sm:text-4xl font-bold text-[var(--color-accent)] opacity-30" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-4xl font-bold text-[var(--color-accent)] opacity-30" style={{ fontFamily: 'var(--font-heading)' }}>
                         {project.number}
                       </span>
                       {project.comingSoon && (
@@ -41,26 +41,26 @@ export default function FeaturedProjects() {
                       )}
                     </div>
 
-                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
                       {project.title}
                     </h3>
-                    <p className="text-xs text-[var(--color-accent)] uppercase tracking-widest font-semibold mb-3 sm:mb-4">
+                    <p className="text-xs text-[var(--color-accent)] uppercase tracking-widest font-semibold mb-4">
                       {project.category}
                     </p>
-                    <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-5 sm:mb-6">
+                    <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-6">
                       {project.description}
                     </p>
 
                     {/* Features */}
                     {project.features.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5 sm:mb-6">
+                      <div className="flex flex-wrap gap-2 mb-6">
                         {project.features.slice(0, 8).map((f) => (
-                          <span key={f} className="text-[0.65rem] sm:text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] border border-[var(--color-border)]">
+                          <span key={f} className="text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] border border-[var(--color-border)]">
                             {f}
                           </span>
                         ))}
                         {project.features.length > 8 && (
-                          <span className="text-[0.65rem] sm:text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)]">
+                          <span className="text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)]">
                             +{project.features.length - 8} more
                           </span>
                         )}
@@ -69,9 +69,9 @@ export default function FeaturedProjects() {
 
                     {/* Tech Stack */}
                     {project.tech.length > 0 && (
-                      <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-6 sm:mb-8">
+                      <div className="flex flex-wrap gap-2 mb-8">
                         {project.tech.map((t) => (
-                          <span key={t} className="badge !text-[0.65rem] sm:!text-[0.7rem]">{t}</span>
+                          <span key={t} className="badge !text-[0.7rem]">{t}</span>
                         ))}
                       </div>
                     )}
@@ -79,14 +79,14 @@ export default function FeaturedProjects() {
 
                   {/* Actions */}
                   {!project.comingSoon && (
-                    <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3">
                       {project.liveUrl && (
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2.5 !text-sm w-full sm:w-auto justify-center">
+                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2.5 !text-sm">
                           Live Demo <ExternalLink size={14} />
                         </a>
                       )}
                       {project.githubUrl && (
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary !py-2.5 !text-sm w-full sm:w-auto justify-center">
+                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary !py-2.5 !text-sm">
                           <GitHubIcon size={14} /> GitHub
                         </a>
                       )}
@@ -95,16 +95,16 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Project Visual */}
-                <div className="relative bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 flex items-center justify-center p-4 sm:p-6 lg:p-8 min-h-[220px] sm:min-h-[280px] border-t lg:border-t-0 lg:border-l border-[var(--color-border)]">
+                <div className="relative bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 flex items-center justify-center p-8 min-h-[300px]">
                   {project.comingSoon ? (
-                    <div className="text-center py-6">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[var(--color-accent-glow)] flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                        <Clock size={28} className="text-[var(--color-accent)] sm:w-8 sm:h-8" />
+                    <div className="text-center">
+                      <div className="w-20 h-20 rounded-2xl bg-[var(--color-accent-glow)] flex items-center justify-center mx-auto mb-4">
+                        <Clock size={32} className="text-[var(--color-accent)]" />
                       </div>
-                      <p className="text-[var(--color-text-muted)] text-xs sm:text-sm font-medium">In Development</p>
+                      <p className="text-[var(--color-text-muted)] text-sm">In Development</p>
                     </div>
                   ) : (
-                    <div className="w-full max-w-sm">
+                    <div className="w-full max-w-lg">
                       {/* App Mockup Frame */}
                       <div className="rounded-xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-primary)] shadow-2xl">
                         <div className="flex items-center gap-1.5 px-3 py-2 bg-[var(--color-bg-card)] border-b border-[var(--color-border)]">
@@ -113,14 +113,18 @@ export default function FeaturedProjects() {
                           <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
                           <span className="ml-2 text-[0.6rem] text-[var(--color-text-muted)] font-mono truncate">{project.liveUrl}</span>
                         </div>
-                        <div className="aspect-[16/10] bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-secondary)]/10 flex items-center justify-center p-4">
+                        {project.image ? (
+                          <img src={project.image} alt={`${project.title} preview`} loading="lazy" className="w-full aspect-[16/10] object-cover block" />
+                        ) : (
+                        <div className="aspect-[16/10] bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-secondary)]/10 flex items-center justify-center">
                           <div className="text-center">
-                            <p className="text-xl sm:text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
+                            <p className="text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
                               {project.title}
                             </p>
-                            <p className="text-[0.7rem] sm:text-xs text-[var(--color-text-muted)] mt-1">{project.category}</p>
+                            <p className="text-xs text-[var(--color-text-muted)] mt-1">{project.category}</p>
                           </div>
                         </div>
+                        )}
                       </div>
                     </div>
                   )}

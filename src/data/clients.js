@@ -19,6 +19,42 @@ export const clients = [
     caseStudyUrl: null,
   },
   {
+    id: 'shree-lata-store',
+    name: 'Shree Lata Gifts & Communication',
+    industry: 'Retail / Next.js E-Commerce',
+    description:
+      'Complete retail digital transformation for a multi-category store in Vatva, Ahmedabad: built a full-stack Next.js e-commerce catalog, ranked Google Business Profile (4.6★), and grew a 12.8K+ Instagram community with WhatsApp order conversions.',
+    services: [
+      'Next.js E-Commerce Website',
+      'Local SEO & GBP (4.6★)',
+      'Instagram Reels & Grid (12.8K+)',
+      'WhatsApp Commerce Funnel',
+      'Product Photography & Branding',
+    ],
+    tech: ['Next.js', 'React', 'Tailwind CSS', 'Local SEO', 'WhatsApp Commerce'],
+    image: '/assets/shree-lata-mockup.jpg',
+    liveUrl: 'https://www.shreelatastore.in/',
+    caseStudyUrl: null,
+  },
+  {
+    id: 'vedik-realty',
+    name: 'Vedik Realty',
+    industry: 'Real Estate & Property Portal',
+    description:
+      'Delivered a 360° digital presence for a real estate consultancy in Dharuhera, Haryana — including full property web portal development, Google Business Profile local ranking, Instagram brand curation, and multi-channel lead funnels.',
+    services: [
+      'Property Web Portal',
+      'Local SEO & Google Maps',
+      'Google Business Profile',
+      'Instagram Branding & Reels',
+      'Lead Generation Funnel',
+    ],
+    tech: ['React', 'Modern Web UI', 'Technical SEO', 'Google Business Profile', 'Social Branding'],
+    image: '/assets/vedik-realty-mockup.jpg',
+    liveUrl: 'https://www.vedikrealty.com/',
+    caseStudyUrl: null,
+  },
+  {
     id: 'siddhivinayak-pg',
     name: 'Siddhivinayak PG',
     industry: 'Hospitality',

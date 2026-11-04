@@ -10,6 +10,24 @@ export const experience = [
   },
   {
     id: 2,
+    role: 'Full-Stack E-Commerce & Local SEO',
+    organization: 'Shree Lata Gifts & Communication',
+    duration: 'Active',
+    description:
+      'Complete retail digital transformation in Vatva, Ahmedabad: built a Next.js e-commerce catalog, optimized Google Business Profile (4.6★), and scaled Instagram community to 12.8K+ followers.',
+    skills: ['Next.js', 'E-Commerce', 'Local SEO', 'Instagram Growth'],
+  },
+  {
+    id: 3,
+    role: 'Web Portal & Digital Growth Lead',
+    organization: 'Vedik Realty',
+    duration: '2 Months',
+    description:
+      'Developed full property web portal, ranked Google Business Profile in Dharuhera, designed Instagram feed creatives, and built multi-channel property lead funnels.',
+    skills: ['Property Portal', 'Local SEO', 'GBP Ranking', 'Social Media'],
+  },
+  {
+    id: 4,
     role: 'Web Developer & Local SEO',
     organization: 'Siddhivinayak PG',
     duration: '6 Months (Ongoing updates)',
@@ -18,7 +36,7 @@ export const experience = [
     skills: ['Web Development', 'Responsive Design', 'Local SEO', 'GBP'],
   },
   {
-    id: 3,
+    id: 5,
     role: 'Digital Marketing & Branding',
     organization: 'Real Estate Projects',
     duration: 'Active',
@@ -27,7 +45,7 @@ export const experience = [
     skills: ['Social Media', 'Branding', 'Content Creation', 'Marketing'],
   },
   {
-    id: 4,
+    id: 6,
     role: 'Python Development Intern',
     organization: 'Internship',
     duration: 'Completed',
@@ -36,13 +54,13 @@ export const experience = [
     skills: ['Python', 'Programming', 'Development'],
   },
   {
-    id: 5,
-    role: 'Freelance Developer',
-    organization: 'Independent',
+    id: 7,
+    role: 'Founder & Freelance Developer',
+    organization: 'Growvia Solutions',
     duration: 'Ongoing',
     description:
-      'Building websites, digital solutions, and AI-powered tools for businesses as an independent freelance developer.',
-    skills: ['React', 'Web Development', 'AI Tools', 'Client Work'],
+      'Building custom full-stack websites, 3D WebGL experiences, local SEO strategies, and AI-powered tools for businesses.',
+    skills: ['React & Next.js', 'Three.js 3D', 'Technical SEO', 'Client Work'],
   },
 ];
 

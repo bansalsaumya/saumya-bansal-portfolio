@@ -16,34 +16,32 @@ export default function FreelanceSection() {
           align="center"
         />
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service, idx) => {
             const Icon = iconMap[service.icon] || Globe;
             return (
               <motion.div
                 key={service.number}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="group p-3.5 sm:p-7 rounded-xl sm:rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover flex flex-col justify-between"
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                className="group p-7 rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover"
               >
-                <div>
-                  <div className="flex items-start justify-between mb-3 sm:mb-5">
-                    <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-[var(--color-accent-glow)] group-hover:bg-[var(--color-accent)]/20 transition-colors">
-                      <Icon size={16} className="sm:w-[22px] sm:h-[22px] text-[var(--color-accent)]" />
-                    </div>
-                    <span className="text-xl sm:text-3xl font-bold text-[var(--color-text-muted)] opacity-20" style={{ fontFamily: 'var(--font-heading)' }}>
-                      {service.number}
-                    </span>
+                <div className="flex items-start justify-between mb-5">
+                  <div className="p-3 rounded-xl bg-[var(--color-accent-glow)] group-hover:bg-[var(--color-accent)]/20 transition-colors">
+                    <Icon size={22} className="text-[var(--color-accent)]" />
                   </div>
-                  <h3 className="text-xs sm:text-lg font-bold mb-1.5 sm:mb-2 leading-snug" style={{ fontFamily: 'var(--font-heading)' }}>
-                    {service.title}
-                  </h3>
-                  <p className="text-[0.65rem] sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                    {service.description}
-                  </p>
+                  <span className="text-3xl font-bold text-[var(--color-text-muted)] opacity-20" style={{ fontFamily: 'var(--font-heading)' }}>
+                    {service.number}
+                  </span>
                 </div>
+                <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {service.title}
+                </h3>
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                  {service.description}
+                </p>
               </motion.div>
             );
           })}

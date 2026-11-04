@@ -22,27 +22,27 @@ export default function AISection() {
           align="center"
         />
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {aiCategories.map((cat, idx) => (
             <motion.div
               key={cat.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="relative group p-3.5 sm:p-7 rounded-xl sm:rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover overflow-hidden flex flex-col justify-between"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="relative group p-7 rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover overflow-hidden"
             >
               {/* Gradient accent */}
               <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-accent)]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="relative z-10">
-                <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-[var(--color-accent-glow)] inline-flex mb-3 sm:mb-5 group-hover:bg-[var(--color-accent)]/20 transition-colors">
-                  <cat.icon size={16} className="sm:w-[22px] sm:h-[22px] text-[var(--color-accent)]" />
+                <div className="p-3 rounded-xl bg-[var(--color-accent-glow)] inline-flex mb-5 group-hover:bg-[var(--color-accent)]/20 transition-colors">
+                  <cat.icon size={22} className="text-[var(--color-accent)]" />
                 </div>
-                <h3 className="text-xs sm:text-lg font-bold mb-1.5 sm:mb-2 leading-snug" style={{ fontFamily: 'var(--font-heading)' }}>
+                <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
                   {cat.title}
                 </h3>
-                <p className="text-[0.65rem] sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                   {cat.description}
                 </p>
               </div>

@@ -140,22 +140,13 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="flex items-center gap-2 lg:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] hover:bg-[var(--color-accent-glow)] transition-all cursor-pointer"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 rounded-lg text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-colors cursor-pointer"
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="lg:hidden p-2 rounded-lg text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-colors cursor-pointer"
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </motion.header>
 
@@ -163,60 +154,51 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25 }}
-            className="fixed inset-0 z-40 bg-[var(--color-bg-primary)]/98 backdrop-blur-2xl lg:hidden flex flex-col justify-between pt-24 pb-8 px-6 overflow-y-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-[var(--color-bg-primary)]/95 backdrop-blur-xl lg:hidden flex flex-col items-center justify-center"
           >
-            <nav className="flex flex-col gap-2 my-auto">
+            <nav className="flex flex-col items-center gap-4">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.04 }}
-                  className="px-4 py-3 text-lg font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-accent-light)] hover:bg-[var(--color-accent-glow)] rounded-xl transition-all flex items-center justify-between"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="text-2xl font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-accent-light)] transition-colors"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  <span>{link.label}</span>
-                  <span className="text-xs text-[var(--color-text-muted)] font-mono">0{i + 1}</span>
+                  {link.label}
                 </motion.a>
               ))}
             </nav>
-
-            <div className="pt-6 border-t border-[var(--color-border)] flex flex-col gap-4 mt-auto">
+            <div className="flex items-center gap-4 mt-10">
               <a
-                href={contactInfo.resumeUrl}
+                href={contactInfo.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary w-full justify-center !py-3"
+                className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-all"
               >
-                <FileText size={16} />
-                Download Resume
+                <GitHubIcon size={20} />
               </a>
-              <div className="flex items-center justify-center gap-4">
-                <a
-                  href={contactInfo.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-all"
-                  aria-label="GitHub"
-                >
-                  <GitHubIcon size={20} />
-                </a>
-                <a
-                  href={contactInfo.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-all"
-                  aria-label="LinkedIn"
-                >
-                  <LinkedInIcon size={20} />
-                </a>
-              </div>
+              <a
+                href={contactInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-all"
+              >
+                <LinkedInIcon size={20} />
+              </a>
+              <button
+                onClick={toggleTheme}
+                className="p-3 rounded-xl border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-all cursor-pointer"
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
             </div>
           </motion.div>
         )}

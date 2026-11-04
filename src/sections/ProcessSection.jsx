@@ -21,32 +21,30 @@ export default function ProcessSection() {
           align="center"
         />
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {steps.map((step, idx) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="relative p-3.5 sm:p-7 rounded-xl sm:rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover flex flex-col justify-between"
+              transition={{ duration: 0.5, delay: idx * 0.08 }}
+              className="relative p-7 rounded-2xl bg-[var(--color-bg-card)] border border-[var(--color-border)] card-hover"
             >
-              <div>
-                <div className="flex items-start justify-between mb-3 sm:mb-5">
-                  <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-[var(--color-accent-glow)]">
-                    <step.icon size={16} className="sm:w-5 sm:h-5 text-[var(--color-accent)]" />
-                  </div>
-                  <span className="text-xl sm:text-3xl font-bold text-[var(--color-text-muted)] opacity-15" style={{ fontFamily: 'var(--font-heading)' }}>
-                    {step.number}
-                  </span>
+              <div className="flex items-start justify-between mb-5">
+                <div className="p-3 rounded-xl bg-[var(--color-accent-glow)]">
+                  <step.icon size={20} className="text-[var(--color-accent)]" />
                 </div>
-                <h3 className="text-xs sm:text-lg font-bold mb-1 sm:mb-2 leading-snug" style={{ fontFamily: 'var(--font-heading)' }}>
-                  {step.title}
-                </h3>
-                <p className="text-[0.65rem] sm:text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                  {step.description}
-                </p>
+                <span className="text-3xl font-bold text-[var(--color-text-muted)] opacity-15" style={{ fontFamily: 'var(--font-heading)' }}>
+                  {step.number}
+                </span>
               </div>
+              <h3 className="text-lg font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                {step.title}
+              </h3>
+              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

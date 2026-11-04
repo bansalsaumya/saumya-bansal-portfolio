@@ -34,7 +34,7 @@ export const clients = [
       'Omnichannel Branding',
     ],
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Local SEO', 'WhatsApp Commerce'],
-    image: '/assets/shree-lata-mockup.jpg',
+    image: '/assets/shree-lata-mockup.svg',
     liveUrl: 'https://www.shreelatastore.in/',
     caseStudyUrl: 'https://growvia-solutions.vercel.app/project-shree-lata.html',
   },

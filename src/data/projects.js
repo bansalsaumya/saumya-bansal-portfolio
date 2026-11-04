@@ -73,7 +73,7 @@ export const featuredProjects = [
     liveUrl: 'https://www.shreelatastore.in/',
     githubUrl: 'https://github.com/bansalsaumya',
     caseStudyUrl: 'https://growvia-solutions.vercel.app/project-shree-lata.html',
-    image: '/assets/shree-lata-mockup.jpg',
+    image: '/assets/shree-lata-mockup.svg',
   },
 ];
 
@@ -85,7 +85,7 @@ export const otherProjects = [
     contribution: 'Engineered the Next.js multi-category storefront, optimized Google Business Profile rankings, and grew a 12.8K+ Instagram shopping community.',
     tech: ['Next.js', 'React', 'Tailwind CSS', 'Local SEO', 'WhatsApp Commerce'],
     liveUrl: 'https://www.shreelatastore.in/',
-    image: '/assets/shree-lata-mockup.jpg'
+    image: '/assets/shree-lata-mockup.svg'
   },
   {
     id: 'vedik-realty-web',

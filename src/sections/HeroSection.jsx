@@ -5,18 +5,17 @@ import { contactInfo } from '../data/services';
 import DeveloperWorkspace3D from '../components/DeveloperWorkspace3D';
 
 const badges = [
-  { label: 'React', icon: Code2 },
-  { label: 'JavaScript', icon: Code2 },
-  { label: 'Python', icon: Cpu },
-  { label: 'AI', icon: Sparkles },
-  { label: 'Full-Stack', icon: Briefcase },
+  { label: 'Next.js & React', icon: Code2 },
+  { label: 'Three.js 3D & GSAP', icon: Sparkles },
+  { label: 'JavaScript & Python', icon: Cpu },
+  { label: 'Technical SEO (#1)', icon: Briefcase },
 ];
 
 const stats = [
-  { label: 'Real-World Client Work', value: 'Client' },
-  { label: 'Frontend Projects', value: 'Frontend' },
-  { label: 'AI Projects', value: 'AI' },
-  { label: 'Freelance Work', value: 'Freelance' },
+  { label: 'Live Client Businesses Scaled', value: '6+' },
+  { label: 'Google Search & Map Rankings', value: '#1' },
+  { label: '3D WebGL & Next.js Apps', value: '60 FPS' },
+  { label: 'Community & Audience Growth', value: '12.8K+' },
 ];
 
 function checkWebGL() {
@@ -40,11 +39,15 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Grid */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(var(--color-text-muted) 1px, transparent 1px), linear-gradient(90deg, var(--color-text-muted) 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
-      }} />
-      
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage:
+            'linear-gradient(var(--color-text-muted) 1px, transparent 1px), linear-gradient(90deg, var(--color-text-muted) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+        }}
+      />
+
       {/* Gradient Orbs */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[var(--color-accent)] rounded-full opacity-[0.06] blur-[120px]" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-[var(--color-accent-secondary)] rounded-full opacity-[0.04] blur-[120px]" />
@@ -60,7 +63,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 badge mb-6"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              Available for Freelance
+              Available for US / Global Remote Roles &amp; Freelance
             </motion.div>
 
             <motion.p
@@ -69,7 +72,7 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-[var(--color-text-secondary)] text-base mb-2"
             >
-              Hi, I'm
+              Hi, I&apos;m
             </motion.p>
 
             <motion.h1
@@ -91,7 +94,7 @@ export default function HeroSection() {
               className="text-lg md:text-xl text-[var(--color-text-secondary)] font-medium mb-4"
               style={{ fontFamily: 'var(--font-heading)' }}
             >
-              Full-Stack Developer &amp; AI-Powered Freelancer
+              Full-Stack &amp; 3D Web Developer · Technical SEO Engineer
             </motion.p>
 
             <motion.p
@@ -100,7 +103,16 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-[var(--color-text-muted)] text-base leading-relaxed max-w-lg mb-8"
             >
-              I build modern, responsive and interactive web applications, AI-powered digital products and business solutions that combine technology, creativity and real-world problem solving.
+              I engineer high-converting Next.js &amp; React applications, 60 FPS Three.js 3D WebGL experiences, and #1 Google-ranked digital platforms for real businesses. Founder at{' '}
+              <a
+                href="https://growvia-solutions.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[var(--color-accent-light)] underline decoration-[var(--color-accent)]/40 hover:decoration-[var(--color-accent)]"
+              >
+                Growvia Solutions
+              </a>
+              .
             </motion.p>
 
             {/* CTAs */}
@@ -111,13 +123,18 @@ export default function HeroSection() {
               className="flex flex-wrap gap-3 mb-8"
             >
               <a href="#projects" className="btn-primary">
-                View My Projects <ArrowRight size={16} />
+                Explore 3D &amp; Web Apps <ArrowRight size={16} />
               </a>
-              <a href="#contact" className="btn-secondary">
-                Let's Work Together
+              <a href="#clients" className="btn-secondary">
+                View Client Track Record
               </a>
-              <a href={contactInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost">
-                <Download size={16} /> Resume
+              <a
+                href={contactInfo.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-ghost"
+              >
+                <Download size={16} /> Resume (PDF)
               </a>
             </motion.div>
 
@@ -165,46 +182,49 @@ export default function HeroSection() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 className="relative flex items-center justify-center"
               >
-                {/* Rotating Ring */}
                 <div className="absolute w-[420px] h-[420px] rounded-full border border-[var(--color-border)] animate-spin-slow" />
-                <div className="absolute w-[340px] h-[340px] rounded-full border border-[var(--color-border)] opacity-50" style={{ animationDirection: 'reverse', animation: 'spin-slow 30s linear infinite reverse' }} />
+                <div
+                  className="absolute w-[340px] h-[340px] rounded-full border border-[var(--color-border)] opacity-50"
+                  style={{
+                    animationDirection: 'reverse',
+                    animation: 'spin-slow 30s linear infinite reverse',
+                  }}
+                />
 
-                {/* Center Terminal */}
                 <div className="relative w-80 glow-border rounded-2xl bg-[var(--color-bg-card)] p-6 animate-float">
-                  {/* Terminal Header */}
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-3 h-3 rounded-full bg-red-400/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-400/80" />
                     <div className="w-3 h-3 rounded-full bg-green-400/80" />
-                    <span className="ml-2 text-xs text-[var(--color-text-muted)] font-mono">saumya.dev</span>
+                    <span className="ml-2 text-xs text-[var(--color-text-muted)] font-mono">
+                      saumya.dev
+                    </span>
                   </div>
-                  {/* Code Lines */}
                   <div className="font-mono text-xs leading-6">
-                    <p><span className="text-[var(--color-accent)]">const</span> <span className="text-emerald-400">developer</span> = {'{'}</p>
-                    <p className="ml-4"><span className="text-[var(--color-text-muted)]">name:</span> <span className="text-amber-300">"Saumya Bansal"</span>,</p>
-                    <p className="ml-4"><span className="text-[var(--color-text-muted)]">role:</span> <span className="text-amber-300">"Full-Stack Dev"</span>,</p>
-                    <p className="ml-4"><span className="text-[var(--color-text-muted)]">skills:</span> [<span className="text-emerald-400">"React"</span>, <span className="text-emerald-400">"AI"</span>],</p>
-                    <p className="ml-4"><span className="text-[var(--color-text-muted)]">passion:</span> <span className="text-amber-300">"Building"</span></p>
+                    <p>
+                      <span className="text-[var(--color-accent)]">const</span>{' '}
+                      <span className="text-emerald-400">engineer</span> = {'{'}
+                    </p>
+                    <p className="ml-4">
+                      <span className="text-[var(--color-text-muted)]">name:</span>{' '}
+                      <span className="text-amber-300">&quot;Saumya Bansal&quot;</span>,
+                    </p>
+                    <p className="ml-4">
+                      <span className="text-[var(--color-text-muted)]">stack:</span> [
+                      <span className="text-emerald-400">&quot;Next.js&quot;</span>,{' '}
+                      <span className="text-emerald-400">&quot;Three.js&quot;</span>],
+                    </p>
+                    <p className="ml-4">
+                      <span className="text-[var(--color-text-muted)]">clients:</span>{' '}
+                      <span className="text-amber-300">&quot;6+ Live Sites&quot;</span>,
+                    </p>
+                    <p className="ml-4">
+                      <span className="text-[var(--color-text-muted)]">seoRank:</span>{' '}
+                      <span className="text-emerald-400">&quot;#1 Google&quot;</span>
+                    </p>
                     <p>{'}'}</p>
                   </div>
                 </div>
-
-                {/* Floating Cards */}
-                <motion.div
-                  animate={{ y: [0, -12, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                  className="absolute -top-4 -right-4 badge !bg-[var(--color-bg-card)] !border-[var(--color-border)] shadow-2xl"
-                >
-                  <Sparkles size={14} className="mr-1 text-[var(--color-accent)]" /> AI Powered
-                </motion.div>
-
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                  className="absolute -bottom-4 -left-8 badge !bg-[var(--color-bg-card)] !border-[var(--color-border)] shadow-2xl"
-                >
-                  <Code2 size={14} className="mr-1 text-emerald-400" /> React & JS
-                </motion.div>
               </motion.div>
             )}
           </div>
@@ -215,14 +235,17 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-[var(--color-border)]"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-10 border-t border-[var(--color-border)]"
         >
           {stats.map((stat) => (
-            <div key={stat.value} className="text-center">
-              <p className="text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
+            <div key={stat.label} className="text-center p-4 rounded-xl bg-[var(--color-bg-card)]/50 border border-[var(--color-border)]">
+              <p
+                className="text-3xl md:text-4xl font-bold gradient-text"
+                style={{ fontFamily: 'var(--font-heading)' }}
+              >
                 {stat.value}
               </p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-1 uppercase tracking-widest">
+              <p className="text-xs text-[var(--color-text-secondary)] mt-1.5 uppercase tracking-wider font-medium">
                 {stat.label}
               </p>
             </div>

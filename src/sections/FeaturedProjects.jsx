@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Clock, ArrowRight } from 'lucide-react';
+import { ExternalLink, Clock, FileText, Sparkles } from 'lucide-react';
 import { GitHubIcon } from '../components/SocialIcons';
 import SectionHeading from '../components/SectionHeading';
 import { featuredProjects } from '../data/projects';
@@ -9,12 +9,12 @@ export default function FeaturedProjects() {
     <section id="projects" className="section-padding bg-[var(--color-bg-secondary)]">
       <div className="container-max px-6">
         <SectionHeading
-          label="Featured Development Projects"
-          title="Selected Applications"
-          description="Applications built to demonstrate my development skills and solve real-world problems."
+          label="Flagship Engineering Showcases"
+          title="Selected Web & 3D Applications"
+          description="Production-grade 3D WebGL experiences and full-stack Next.js applications engineered for visual impact, 60 FPS performance, and real-world conversion."
         />
 
-        <div className="space-y-8">
+        <div className="space-y-10">
           {featuredProjects.map((project, idx) => (
             <motion.div
               key={project.id}
@@ -30,10 +30,18 @@ export default function FeaturedProjects() {
                 {/* Project Info */}
                 <div className="p-8 lg:p-10 flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className="text-4xl font-bold text-[var(--color-accent)] opacity-30" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <span
+                        className="text-4xl font-bold text-[var(--color-accent)] opacity-35"
+                        style={{ fontFamily: 'var(--font-heading)' }}
+                      >
                         {project.number}
                       </span>
+                      {project.impact && (
+                        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          <Sparkles size={12} /> {project.impact}
+                        </span>
+                      )}
                       {project.comingSoon && (
                         <span className="flex items-center gap-1.5 badge !bg-amber-500/10 !text-amber-400 !border-amber-500/20">
                           <Clock size={12} /> Coming Soon
@@ -41,10 +49,13 @@ export default function FeaturedProjects() {
                       )}
                     </div>
 
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
+                    <h3
+                      className="text-2xl lg:text-3xl font-bold mb-2"
+                      style={{ fontFamily: 'var(--font-heading)' }}
+                    >
                       {project.title}
                     </h3>
-                    <p className="text-xs text-[var(--color-accent)] uppercase tracking-widest font-semibold mb-4">
+                    <p className="text-xs text-[var(--color-accent-light)] uppercase tracking-widest font-semibold mb-4">
                       {project.category}
                     </p>
                     <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-6">
@@ -55,7 +66,10 @@ export default function FeaturedProjects() {
                     {project.features.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-6">
                         {project.features.slice(0, 8).map((f) => (
-                          <span key={f} className="text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] border border-[var(--color-border)]">
+                          <span
+                            key={f}
+                            className="text-[0.7rem] px-2.5 py-1 rounded-md bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] border border-[var(--color-border)]"
+                          >
                             {f}
                           </span>
                         ))}
@@ -71,7 +85,9 @@ export default function FeaturedProjects() {
                     {project.tech.length > 0 && (
                       <div className="flex flex-wrap gap-2 mb-8">
                         {project.tech.map((t) => (
-                          <span key={t} className="badge !text-[0.7rem]">{t}</span>
+                          <span key={t} className="badge !text-[0.7rem]">
+                            {t}
+                          </span>
                         ))}
                       </div>
                     )}
@@ -81,13 +97,33 @@ export default function FeaturedProjects() {
                   {!project.comingSoon && (
                     <div className="flex flex-wrap gap-3">
                       {project.liveUrl && (
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2.5 !text-sm">
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary !py-2.5 !px-5 !text-sm"
+                        >
                           Live Demo <ExternalLink size={14} />
                         </a>
                       )}
                       {project.githubUrl && (
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-secondary !py-2.5 !text-sm">
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-secondary !py-2.5 !px-5 !text-sm"
+                        >
                           <GitHubIcon size={14} /> GitHub
+                        </a>
+                      )}
+                      {project.caseStudyUrl && (
+                        <a
+                          href={project.caseStudyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-secondary !py-2.5 !px-4 !text-sm"
+                        >
+                          <FileText size={14} /> Case Study
                         </a>
                       )}
                     </div>
@@ -95,39 +131,46 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Project Visual */}
-                <div className="relative bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 flex items-center justify-center p-8 min-h-[300px]">
-                  {project.comingSoon ? (
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-2xl bg-[var(--color-accent-glow)] flex items-center justify-center mx-auto mb-4">
-                        <Clock size={32} className="text-[var(--color-accent)]" />
+                <div className="relative bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 flex items-center justify-center p-6 lg:p-8 min-h-[300px]">
+                  <div className="w-full max-w-lg">
+                    <a
+                      href={project.liveUrl || '#'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-primary)] shadow-2xl group"
+                    >
+                      <div className="flex items-center gap-1.5 px-3 py-2 bg-[var(--color-bg-card)] border-b border-[var(--color-border)]">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
+                        <span className="ml-2 text-[0.65rem] text-[var(--color-text-muted)] font-mono truncate">
+                          {project.liveUrl}
+                        </span>
                       </div>
-                      <p className="text-[var(--color-text-muted)] text-sm">In Development</p>
-                    </div>
-                  ) : (
-                    <div className="w-full max-w-lg">
-                      {/* App Mockup Frame */}
-                      <div className="rounded-xl overflow-hidden border border-[var(--color-border)] bg-[var(--color-bg-primary)] shadow-2xl">
-                        <div className="flex items-center gap-1.5 px-3 py-2 bg-[var(--color-bg-card)] border-b border-[var(--color-border)]">
-                          <div className="w-2.5 h-2.5 rounded-full bg-red-400/70" />
-                          <div className="w-2.5 h-2.5 rounded-full bg-yellow-400/70" />
-                          <div className="w-2.5 h-2.5 rounded-full bg-green-400/70" />
-                          <span className="ml-2 text-[0.6rem] text-[var(--color-text-muted)] font-mono truncate">{project.liveUrl}</span>
-                        </div>
-                        {project.image ? (
-                          <img src={project.image} alt={`${project.title} preview`} loading="lazy" className="w-full aspect-[16/10] object-cover block" />
-                        ) : (
+                      {project.image ? (
+                        <img
+                          src={project.image}
+                          alt={`${project.title} preview`}
+                          loading="lazy"
+                          className="w-full aspect-[16/10] object-cover block transition-transform duration-500 group-hover:scale-103"
+                        />
+                      ) : (
                         <div className="aspect-[16/10] bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-accent-secondary)]/10 flex items-center justify-center">
                           <div className="text-center">
-                            <p className="text-2xl font-bold gradient-text" style={{ fontFamily: 'var(--font-heading)' }}>
+                            <p
+                              className="text-2xl font-bold gradient-text"
+                              style={{ fontFamily: 'var(--font-heading)' }}
+                            >
                               {project.title}
                             </p>
-                            <p className="text-xs text-[var(--color-text-muted)] mt-1">{project.category}</p>
+                            <p className="text-xs text-[var(--color-text-muted)] mt-1">
+                              {project.category}
+                            </p>
                           </div>
                         </div>
-                        )}
-                      </div>
-                    </div>
-                  )}
+                      )}
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>

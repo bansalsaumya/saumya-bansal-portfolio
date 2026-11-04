@@ -1,38 +1,38 @@
 export const services = [
   {
     number: '01',
-    title: 'Website Development',
-    description: 'Responsive business websites, landing pages and web applications.',
+    title: 'Full-Stack Web & Next.js Apps',
+    description: 'High-converting Next.js & React applications, custom business portals, and scalable e-commerce storefronts.',
     icon: 'Globe',
   },
   {
     number: '02',
-    title: 'Frontend Development',
-    description: 'Modern interfaces using React, JavaScript and Tailwind CSS.',
+    title: '3D WebGL & Interactive Frontend',
+    description: '60 FPS procedural 3D product experiences using Three.js, GSAP ScrollTrigger, Lenis, and Web Audio.',
     icon: 'Code2',
   },
   {
     number: '03',
-    title: 'AI-Powered Solutions',
-    description: 'AI-assisted development, AI content workflows and AI creative solutions.',
-    icon: 'Sparkles',
-  },
-  {
-    number: '04',
-    title: 'SEO & Local Search',
-    description: 'SEO strategy, keyword research and Google Business Profile optimization.',
+    title: 'Technical & Local SEO Engineering',
+    description: 'JSON-LD schema architecture, Core Web Vitals optimization, and #1 Google Search & Map Pack rankings.',
     icon: 'Search',
   },
   {
+    number: '04',
+    title: 'AI-Powered Workflows & Tools',
+    description: 'AI-assisted engineering, LLM prompt workflows, automated content pipelines, and custom brand visuals.',
+    icon: 'Sparkles',
+  },
+  {
     number: '05',
-    title: 'Social Media',
-    description: 'Instagram posts, reels, captions and content strategy.',
+    title: 'D2C & WhatsApp Commerce',
+    description: 'Interactive product customizers, slide-out cart drawers, and instant WhatsApp order checkout funnels.',
     icon: 'Share2',
   },
   {
     number: '06',
-    title: 'Digital Branding',
-    description: 'Business creatives, promotional material and digital brand presentation.',
+    title: 'Digital Brand Architecture',
+    description: 'End-to-end UI/UX design systems, social media growth (12.8K+ communities), and conversion copywriting.',
     icon: 'Palette',
   },
 ];
@@ -45,5 +45,5 @@ export const contactInfo = {
   instagram:
     'https://www.instagram.com/web_growvia',
   github: 'https://github.com/bansalsaumya',
-  resumeUrl: '/assets/saumya-bansal-resume.docx',
+  resumeUrl: '/assets/resume.pdf',
 };

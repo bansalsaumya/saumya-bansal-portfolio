@@ -83,7 +83,7 @@ export default function Navbar() {
               Saumya Bansal
             </span>
             <span className="text-[0.65rem] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
-              Full-Stack Developer
+              Full-Stack &amp; 3D Developer
             </span>
           </a>
 

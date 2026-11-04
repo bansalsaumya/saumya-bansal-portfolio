@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, FileText, Star, Quote } from 'lucide-react';
 import SectionHeading from '../components/SectionHeading';
+import Tilt3DCard from '../components/Tilt3DCard';
 import { clients, testimonials } from '../data/clients';
 
 export default function ClientWork() {
@@ -21,8 +22,9 @@ export default function ClientWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.08 }}
-              className="group glow-border rounded-2xl overflow-hidden bg-[var(--color-bg-card)] card-hover flex flex-col justify-between"
+              className="group"
             >
+              <Tilt3DCard className="glow-border rounded-2xl overflow-hidden bg-[var(--color-bg-card)] card-hover flex flex-col justify-between h-full" maxTilt={5}>
               <div>
                 {/* Image */}
                 <div className="aspect-[16/9] overflow-hidden bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 relative">
@@ -120,6 +122,7 @@ export default function ClientWork() {
                   )}
                 </div>
               </div>
+              </Tilt3DCard>
             </motion.div>
           ))}
         </div>

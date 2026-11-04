@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion';
 import { FileText, Menu, X, Sun, Moon } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 import { contactInfo } from '../data/services';
@@ -17,6 +17,8 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 28, restDelta: 0.001 });
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isDark, setIsDark] = useState(true);
 
@@ -73,6 +75,16 @@ export default function Navbar() {
           scrolled ? 'navbar-scrolled' : 'bg-transparent'
         }`}
       >
+        {/* Scroll-Driven Top Progress Bar */}
+        <motion.div
+          style={{
+            scaleX,
+            transformOrigin: '0% 50%',
+            height: '2.5px',
+            background: 'linear-gradient(90deg, #6366f1, #8b5cf6, #34d399)',
+          }}
+          className="w-full"
+        />
         <div className="container-max flex items-center justify-between px-6 py-4">
           {/* Logo */}
           <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex flex-col">

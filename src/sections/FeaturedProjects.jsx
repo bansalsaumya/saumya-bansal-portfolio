@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Clock, FileText, Sparkles } from 'lucide-react';
 import { GitHubIcon } from '../components/SocialIcons';
 import SectionHeading from '../components/SectionHeading';
+import Tilt3DCard from '../components/Tilt3DCard';
 import { featuredProjects } from '../data/projects';
 
 export default function FeaturedProjects() {
@@ -132,7 +133,7 @@ export default function FeaturedProjects() {
 
                 {/* Project Visual */}
                 <div className="relative bg-gradient-to-br from-[var(--color-accent)]/5 to-[var(--color-accent-secondary)]/5 flex items-center justify-center p-6 lg:p-8 min-h-[300px]">
-                  <div className="w-full max-w-lg">
+                  <Tilt3DCard className="w-full max-w-lg" maxTilt={9}>
                     <a
                       href={project.liveUrl || '#'}
                       target="_blank"
@@ -170,7 +171,7 @@ export default function FeaturedProjects() {
                         </div>
                       )}
                     </a>
-                  </div>
+                  </Tilt3DCard>
                 </div>
               </div>
             </motion.div>
